@@ -21,25 +21,31 @@ class _ChatPageState extends State<ChatPage> {
         name: "Dev2 Stack",
         isGroup: true,
         currentMessage: "Hi everyone in this group",
+        time: "10:05",
         icon: "group.svg"),
     ChatModel(
         name: "Dev2 Stack",
         isGroup: false,
         currentMessage: "Hi everyone",
+        time: "10:05",
         icon: "person.svg"),
     ChatModel(
         name: "Dev2 Stack",
         isGroup: true,
         currentMessage: "Hi everyone",
+        time: "10:05",
         icon: "group.svg")
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:ListView.builder(
+      body: ListView.builder(
         itemCount: 4,
-        itemBuilder: (context, index) => CustomCard(chatModel: chats[index],),),
+        itemBuilder: (context, index) => CustomCard(
+          chatModel: chats[index],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.chat),

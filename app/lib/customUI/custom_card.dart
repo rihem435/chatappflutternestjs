@@ -1,4 +1,5 @@
 import 'package:app/model/chat_model.dart';
+import 'package:app/screens/individual_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -10,14 +11,20 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => IndividualScreen(
+                      chatModel: chatModel,
+                    )));
+      },
       child: Column(
         children: [
           ListTile(
             leading: CircleAvatar(
               child: SvgPicture.asset(
-                //   chatModel!.isGroup! ? "assets/group.svg" : "assets/person.svg",
-                "assets/group.svg",
+                chatModel!.isGroup! ? "assets/group.svg" : "assets/person.svg",
                 color: Colors.white,
                 height: 35,
                 width: 35,
