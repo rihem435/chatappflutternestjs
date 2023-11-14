@@ -22,3 +22,78 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: MyHomePage(),
+//     );
+//   }
+// }
+
+// class MyHomePage extends StatefulWidget {
+//   @override
+//   _MyHomePageState createState() => _MyHomePageState();
+// }
+
+// class _MyHomePageState extends State<MyHomePage> {
+//   List<String> items = ['Apple', 'Banana', 'Orange', 'Grapes', 'Watermelon'];
+//   List<String> filteredItems = [];
+
+//   @override
+//   void initState() {
+//     super.initState();
+//     filteredItems.addAll(items);
+//   }
+
+//   void filterList(String query) {
+//     filteredItems.clear();
+//     items.forEach((item) {
+//       if (item.toLowerCase().contains(query.toLowerCase())) {
+//         filteredItems.add(item);
+//       }
+//     });
+//     setState(() {});
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Search Example'),
+//       ),
+//       body: Column(
+//         children: [
+//           Padding(
+//             padding: const EdgeInsets.all(8.0),
+//             child: TextField(
+//               onChanged: (query) {
+//                 filterList(query);
+//               },
+//               decoration: InputDecoration(
+//                 labelText: 'Search',
+//                 hintText: 'Enter a search term',
+//                 prefixIcon: Icon(Icons.search),
+//               ),
+//             ),
+//           ),
+//           Expanded(
+//             child: ListView.builder(
+//               itemCount: filteredItems.length,
+//               itemBuilder: (context, index) {
+//                 return ListTile(
+//                   title: Text(filteredItems[index]),
+//                 );
+//               },
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
