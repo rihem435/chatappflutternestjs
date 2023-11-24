@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomContactCard extends StatelessWidget {
-  final ChatModel? contact;
-  const CustomContactCard({Key? key, this.contact}) : super(key: key);
+  ChatModel? contact;
+  CustomContactCard({Key? key, this.contact}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print('select +++++++++++++++++-------------------${contact!.select}');
     return ListTile(
       leading: Container(
         height: 53,
@@ -23,15 +24,17 @@ class CustomContactCard extends StatelessWidget {
               ),
               backgroundColor: Colors.blueGrey[200],
             ),
-            Positioned(
-              bottom: 4,
-              right: 5,
-              child: CircleAvatar(
-                child: Icon(Icons.check, color: Colors.white, size: 18),
-                radius: 11,
-                backgroundColor: Colors.teal,
-              ),
-            )
+            contact!.select!
+                ? Positioned(
+                    bottom: 4,
+                    right: 5,
+                    child: CircleAvatar(
+                      child: Icon(Icons.check, color: Colors.white, size: 18),
+                      radius: 11,
+                      backgroundColor: Colors.teal,
+                    ),
+                  )
+                : Container()
           ],
         ),
       ),

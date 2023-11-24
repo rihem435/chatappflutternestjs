@@ -15,10 +15,10 @@ class _SelectContactScreenState extends State<SelectContactScreen> {
   @override
   Widget build(BuildContext context) {
     List<ChatModel> contacts = [
-      ChatModel(name: "Dev Stack1", status: "A full stack developer"),
-      ChatModel(name: "Dev Stack2", status: "A full stack developer"),
-      ChatModel(name: "Dev Stack3", status: "A full stack developer"),
-      ChatModel(name: "Dev Stack4", status: "A full stack developer"),
+      ChatModel(name: "Dev Stack1", status: "A full stack developer",select: false),
+      ChatModel(name: "Dev Stack2", status: "A full stack developer",select: false),
+      ChatModel(name: "Dev Stack3", status: "A full stack developer",select: false),
+      ChatModel(name: "Dev Stack4", status: "A full stack developer",select: false),
     ];
     return Scaffold(
       appBar: AppBar(

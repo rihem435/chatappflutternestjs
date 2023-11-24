@@ -1,3 +1,4 @@
+import 'package:app/pages/camera_page.dart';
 import 'package:app/pages/chat_page.dart';
 import 'package:flutter/material.dart';
 
@@ -53,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen>
         ],
         bottom: TabBar(
           controller: controller,
-          //The color of the line that appears below the selected tab. 
+          //The color of the line that appears below the selected tab.
           indicatorColor: Colors.white,
           tabs: [
             Tab(
@@ -72,8 +73,14 @@ class _HomeScreenState extends State<HomeScreen>
         ),
       ),
       body: TabBarView(
-          controller: controller,
-          children: [Text('chat'), ChatPage(), Text('calls'), Text('status')]),
+        controller: controller,
+        children: [
+          CameraPage(),
+          ChatPage(),
+          Text('calls'),
+          Text('status'),
+        ],
+      ),
     );
   }
 }

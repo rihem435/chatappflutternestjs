@@ -17,25 +17,25 @@ class _ChatPageState extends State<ChatPage> {
         isGroup: false,
         currentMessage: "Hi everyone",
         time: "10:05",
-        icon: "person.svg"),
+        icon: "person.svg",select: false),
     ChatModel(
         name: "Dev2 Stack",
         isGroup: true,
         currentMessage: "Hi everyone in this group",
         time: "10:05",
-        icon: "group.svg"),
+        icon: "group.svg",select: false),
     ChatModel(
         name: "Dev2 Stack",
         isGroup: false,
         currentMessage: "Hi everyone",
         time: "10:05",
-        icon: "person.svg"),
+        icon: "person.svg",select: false),
     ChatModel(
         name: "Dev2 Stack",
         isGroup: true,
         currentMessage: "Hi everyone",
         time: "10:05",
-        icon: "group.svg")
+        icon: "group.svg",select: false)
   ];
 
   @override
